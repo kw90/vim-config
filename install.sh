@@ -24,6 +24,13 @@ sudo npm -g install raml-cop markdownlint-cli write-good
 pip install --user pycodestyle pyflakes flake8 vim-vint proselint yamllint
 sudo pacman -S shellcheck tidy
 
+echo_info "Patch existing fonts via installing powerline font collection"
+git clone git@github.com:powerline/fonts.git
+cd fonts || return
+./install.sh
+
+
+
 nvim -c checkhealth
 
 echo_done "vim config applied"
