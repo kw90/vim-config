@@ -4,7 +4,7 @@
 
 echo_info "Installing Python2 and 3 and respective virtualenv"
 
-sudo pacman -S python python2 neovim python3-venv python2-venv
+sudo pacman -S python python2 neovim
 
 echo_done "Installed Python and NeoVim"
 
@@ -19,8 +19,8 @@ make install
 sudo npm install -g neovim
 
 echo_info "Installing Linters"
-npm -g install jshint jsxhint jsonlint stylelint sass-lint
-npm -g install raml-cop markdownlint-cli write-good
+sudo npm -g install jshint jsxhint jsonlint stylelint sass-lint
+sudo npm -g install raml-cop markdownlint-cli write-good
 pip install --user pycodestyle pyflakes flake8 vim-vint proselint yamllint
 sudo pacman -S shellcheck tidy
 
