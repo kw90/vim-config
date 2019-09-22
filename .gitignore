@@ -1,6 +1,7 @@
 *~
 /benchmarks/
 /spell/
+/fonts/
 /.vault.vim
 /.local.vimrc
 /.stignore
