@@ -30,7 +30,6 @@ echo_info "Patch existing fonts via installing powerline font collection"
 
 git clone git@github.com:powerline/fonts.git
 cd fonts || return
-./install.sh
 
 echo_done "Installation succeeded"
 

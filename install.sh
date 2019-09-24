@@ -27,9 +27,6 @@ sudo pacman -S shellcheck tidy
 echo_info "Patch existing fonts via installing powerline font collection"
 git clone git@github.com:powerline/fonts.git
 cd fonts || return
-./install.sh
-
-
 
 nvim -c checkhealth
 
