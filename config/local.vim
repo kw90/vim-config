@@ -1,32 +1,21 @@
 " activates filetype detection
-"filetype plugin indent on
+filetype plugin indent on
 
 " activates syntax highlighting among other things
-"syntax on
+syntax on
 colorscheme nord
 set t_Co=256
 
 " allows you to deal with multiple unsaved
 " buffers simultaneously without resorting
 " to misusing tabs
-"set hidden
+set hidden
 
 " just hit backspace without this one and
 " see for yourself
 set backspace=indent,eol,start
 
-" refresh browser firefox on vim save
-" TODO: Fix call of function - where to put it?
-"autocmd BufWriteCmd *.html,*.css,*.haml,*.md :call Refresh_browser()
-"function()! Refresh_browser()
-"	if &modified
-"		write
-"		silent !xdotool key --window $(xdotool search --onlyvisible --name Firefox) ctrl+r
-"	endif
-"endfunction
-
 let g:maplocalleader=','
-
 
 " Airline Configurations
 "let g:airline_solarized_bg='dark'
@@ -52,3 +41,29 @@ let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_cpp_checkers = ['GCC']
 let g:syntastic_tex_checkers = ['lacheck', 'text/language_check']
 
+
+"" Functions
+" refresh browser firefox on vim save
+autocmd BufWriteCmd *.html,*.css,*.haml,*.md :call Refresh_browser()
+function! Refresh_browser()
+	if &modified
+		write
+		silent !xdotool key --window $(xdotool search --onlyvisible --name Firefox) ctrl+r
+	endif
+endfunction
+
+let g:committia_hooks = {}
+function! g:committia_hooks.edit_open(info)
+    " Additional settings
+    setlocal spell
+
+    " If no commit message, start with insert mode
+    if a:info.vcs ==# 'git' && getline(1) ==# ''
+        startinsert
+    endif
+
+    " Scroll the diff window from insert mode
+    " Map <C-n> and <C-p>
+    imap <buffer><C-n> <Plug>(committia-scroll-diff-down-half)
+    imap <buffer><C-p> <Plug>(committia-scroll-diff-up-half)
+endfunction
