@@ -41,6 +41,12 @@ let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_cpp_checkers = ['GCC']
 let g:syntastic_tex_checkers = ['lacheck', 'text/language_check']
 
+" Enable GitHub flavoured MD
+let vim_markdown_preview_github=1
+let vim_markdown_preview_browser='Firefox'
+let vim_markdown_preview_hotkey='<C-m>'
+let vim_markdown_preview_toggle=2
+
 
 "" Functions
 " refresh browser firefox on vim save
