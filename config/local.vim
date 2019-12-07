@@ -39,7 +39,7 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_cpp_checkers = ['GCC']
-let g:syntastic_tex_checkers = ['lacheck', 'text/language_check']
+let g:syntastic_tex_checkers = ['chktex']
 
 " Enable GitHub flavoured MD
 let vim_markdown_preview_github=1
