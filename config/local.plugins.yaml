@@ -11,4 +11,5 @@
 - repo: taketwo/vim-ros
 - repo: zxqfl/tabnine-vim
 - repo: scrooloose/syntastic
-- repo: lervag/vimtex
+# - repo: lervag/vimtex
+- repo: vim-latex/vim-latex
