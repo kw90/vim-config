@@ -1,4 +1,3 @@
----
 # Custom Plugins
 
 - repo: sgur/vim-editorconfig
@@ -13,3 +12,4 @@
 - repo: scrooloose/syntastic
 - repo: lervag/vimtex
 - repo: vimwiki/vimwiki
+- repo: vim-latex/vim-latex
