@@ -47,6 +47,13 @@ let vim_markdown_preview_browser='Firefox'
 let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_toggle=2
 
+let g:vimwiki_list = [{'path': '~/vimwiki',
+    \ 'template_path': '~/vimwiki/templates',
+    \ 'template_default': 'custom',
+    \ 'template_ext': '.html'}]
+
+let g:vimwiki_valid_html_tags = 'b,i,s,u,sub,sup,kbd,br,hr, pre, script'
+
 
 "" Functions
 " refresh browser firefox on vim save

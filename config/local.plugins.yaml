@@ -1,11 +1,11 @@
 ---
 # Custom Plugins
 
+- repo: vim-airline/vim-airline
+- repo: vim-airline/vim-airline-themes
 - repo: sgur/vim-editorconfig
 - repo: itchyny/vim-gitbranch
 - repo: itchyny/vim-parenmatch
-- repo: vim-airline/vim-airline
-- repo: vim-airline/vim-airline-themes
 - repo: arcticicestudio/nord-vim
 - repo: vimoutliner/vimoutliner
 - repo: taketwo/vim-ros
