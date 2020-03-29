@@ -12,3 +12,4 @@
 - repo: zxqfl/tabnine-vim
 - repo: scrooloose/syntastic
 - repo: lervag/vimtex
+- repo: vimwiki/vimwiki
