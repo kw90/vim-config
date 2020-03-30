@@ -48,9 +48,9 @@ let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_toggle=2
 
 let g:vimwiki_list = [{'path': '~/vimwiki/wikis',
-    \ 'syntax': 'markdown',
-    \ 'ext': '.wiki',
-    \ 'custom_wiki2html': '~/vimwiki/convert.py',
+    "\ 'syntax': 'markdown',
+    "\ 'ext': '.wiki',
+    "\ 'custom_wiki2html': '~/vimwiki/convert.py',
     \ 'path_html': '~/vimwiki/public',
     \ 'template_path': '~/vimwiki/templates',
     \ 'template_default': 'custom',
