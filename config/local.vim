@@ -47,7 +47,9 @@ let vim_markdown_preview_browser='Firefox'
 let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_toggle=2
 
-let g:vimwiki_list = [{'path': '~/vimwiki',
+let g:vimwiki_list = [{'path': '~/vimwiki/wikis',
+    \ 'syntax': 'markdown', 'ext': '.md',
+    \ 'path_html': '~/vimwiki/public',
     \ 'template_path': '~/vimwiki/templates',
     \ 'template_default': 'custom',
     \ 'template_ext': '.html'}]
