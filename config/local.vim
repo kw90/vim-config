@@ -49,6 +49,7 @@ let vim_markdown_preview_toggle=2
 
 " VimWiki setup
 let wiki_1 = {}
+let wiki_1.auto_export = 1
 let wiki_1.path = '~/vimwiki/md-wikis'
 let wiki_1.syntax = 'markdown'
 let wiki_1.ext = '.md'
