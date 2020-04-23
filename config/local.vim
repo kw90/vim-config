@@ -52,7 +52,7 @@ let wiki_1 = {}
 let wiki_1.auto_export = 1
 let wiki_1.path = '~/vimwiki/md-wikis'
 let wiki_1.syntax = 'markdown'
-let wiki_1.ext = '.md'
+let wiki_1.ext = '.wiki'
 let wiki_1.path_html = '~/vimwiki/public'
 let wiki_1.custom_wiki2html = 'vimwiki_markdown'
 let wiki_1.template_default = 'custom'
@@ -64,6 +64,16 @@ let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown'
 let g:vimwiki_global_ext = 0
 let g:vimwiki_valid_html_tags = 'b,i,s,u,sub,sup,kbd,br,hr, pre, script'
 let g:vimwiki_listsyms = '❌🔹🔷🟦✅'
+
+let g:tagbar_type_vimwiki = {
+          \   'ctagstype':'markdown'
+          \ , 'kinds':['h:header']
+          \ , 'sro':'&&&'
+          \ , 'kind2scope':{'h':'header'}
+          \ , 'sort':0
+          \ , 'ctagsbin':'~/vimwiki/vwtags.py'
+          \ , 'ctagsargs': 'default'
+          \ }
 
 " Old vimwiki syntax config
 " let g:vimwiki_list = [{'path': '~/vimwiki/wikis',
