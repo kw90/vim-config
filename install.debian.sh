@@ -4,7 +4,7 @@
 
 echo_info "Installing Python2 and 3 and neovim"
 
-sudo apt-get install -y python python2.7 neovim
+sudo apt-get install -y python python2.7 neovim nodejs
 
 echo_done "Installed Python and NeoVim"
 
@@ -15,16 +15,17 @@ ln -s ~/source/dotfiles/vim ~/.config/nvim
 echo_info "Installing nvim plugins and configs"
 
 ./venv.sh
+sudo npm install -g npm
 make test
 make install
 sudo npm install -g neovim
 
 echo_info "Installing Linters"
 
-sudo npm -g install jshint jsxhint jsonlint stylelint sass-lint
+sudo npm -g install eslint jshint jsxhint jsonlint stylelint sass-lint
 sudo npm -g install raml-cop markdownlint-cli write-good
-pip install --user pycodestyle pyflakes flake8 vim-vint proselint yamllint
-sudo apt-get install -y shellcheck tidy
+pip install --user pycodestyle pyflakes flake8 vim-vint proselint yamllint ansible-lint
+sudo apt-get install -y shellcheck tidy yamllint
 
 echo_info "Patch existing fonts via installing powerline font collection"
 
