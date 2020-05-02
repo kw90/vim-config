@@ -18,7 +18,7 @@ set backspace=indent,eol,start
 let g:maplocalleader=','
 
 " Airline Configurations
-"let g:airline_solarized_bg='dark'
+let g:airline_solarized_bg='dark'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline_powerline_fonts = 1
