@@ -13,3 +13,4 @@
 - repo: lervag/vimtex
 - repo: vimwiki/vimwiki
 - repo: vim-latex/vim-latex
+- repo: PratikBhusal/vim-grip
