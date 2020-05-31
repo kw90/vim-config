@@ -1,1 +1,0 @@
-/home/kw/source/dotfiles/vim
