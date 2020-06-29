@@ -47,6 +47,9 @@ let vim_markdown_preview_browser='Firefox'
 let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_toggle=2
 
+" Add black code formatter for Python
+autocmd BufWritePre *.py execute ':Black'
+
 " VimWiki setup
 let wiki_1 = {}
 let wiki_1.auto_export = 1
