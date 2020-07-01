@@ -50,6 +50,23 @@ let vim_markdown_preview_toggle=2
 " Add black code formatter for Python
 autocmd BufWritePre *.py execute ':Black'
 
+" Run tests for Python in Docker
+function! DockerTransform(cmd) abort
+  return ' docker-compose -f docker-compose.test.yml run --rm tests ' . a:cmd
+endfunction
+
+let g:test#custom_transformations = {'docker': function('DockerTransform')}
+let g:test#transformation = 'docker'
+let test#python#pytest#executable = 'python -m pytest'
+let g:test#preserve_screen = 1
+let test#strategy = "neovim"
+
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
+
 " VimWiki setup
 let wiki_1 = {}
 let wiki_1.auto_export = 1
