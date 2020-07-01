@@ -8,7 +8,7 @@
 - repo: itchyny/vim-parenmatch
 - repo: arcticicestudio/nord-vim
 - repo: vimoutliner/vimoutliner
-- repo: taketwo/vim-ros
+# - repo: taketwo/vim-ros
 - repo: zxqfl/tabnine-vim
 - repo: scrooloose/syntastic
 - repo: lervag/vimtex
@@ -16,3 +16,4 @@
 - repo: vim-latex/vim-latex
 - repo: psf/black
 - repo: PratikBhusal/vim-grip
+- repo: vim-test/vim-test
