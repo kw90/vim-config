@@ -10,7 +10,7 @@
 - repo: vimoutliner/vimoutliner
 # - repo: taketwo/vim-ros
 - repo: zxqfl/tabnine-vim
-- repo: scrooloose/syntastic
+- repo: vim-syntastic/syntastic
 - repo: lervag/vimtex
 - repo: vimwiki/vimwiki
 - repo: vim-latex/vim-latex
