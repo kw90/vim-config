@@ -18,8 +18,8 @@ set backspace=indent,eol,start
 let g:maplocalleader=','
 
 " Airline Configurations
-let g:airline_solarized_bg='dark'
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_solarized_bg='dark'
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline_powerline_fonts = 1
 
@@ -78,13 +78,11 @@ let wiki_1.custom_wiki2html = 'vimwiki_markdown'
 let wiki_1.template_default = 'custom'
 let wiki_1.template_path = '~/vimwiki/templates'
 let wiki_1.template_ext = '.html'
-
 let g:vimwiki_list = [wiki_1]
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 let g:vimwiki_global_ext = 0
 let g:vimwiki_valid_html_tags = 'b,i,s,u,sub,sup,kbd,br,hr, pre, script'
 let g:vimwiki_listsyms = '❌🔹🔷🟦✅'
-
 let g:tagbar_type_vimwiki = {
           \   'ctagstype':'markdown'
           \ , 'kinds':['h:header']
@@ -94,16 +92,8 @@ let g:tagbar_type_vimwiki = {
           \ , 'ctagsbin':'~/vimwiki/vwtags.py'
           \ , 'ctagsargs': 'default'
           \ }
-
-" Old vimwiki syntax config
-" let g:vimwiki_list = [{'path': '~/vimwiki/wikis',
-"     "\ 'syntax': 'markdown',
-"     "\ 'ext': '.wiki',
-"     "\ 'custom_wiki2html': '~/vimwiki/convert.py',
-"    \ 'path_html': '~/vimwiki/public',
-"    \ 'template_path': '~/vimwiki/templates',
-"    \ 'template_default': 'custom',
-"    \ 'template_ext': '.html'}]
+"" Map VimWiki shortcuts
+nmap <silent> w<C-h> :VimwikiAll2HTML<CR>
 
 
 "" Functions
