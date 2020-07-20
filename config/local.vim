@@ -17,6 +17,8 @@ set backspace=indent,eol,start
 
 let g:maplocalleader=','
 
+let g:python3_host_prog  = '/usr/local/bin/python3'
+
 " Airline Configurations
 let g:airline_solarized_bg='dark'
 let g:airline#extensions#tabline#enabled = 1
