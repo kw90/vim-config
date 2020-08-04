@@ -37,6 +37,7 @@ pip3 install --user vim-vint pycodestyle pyflakes flake8
 echo_info "Installing tools"
 brew install the_silver_searcher rg z fzf
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+pip3 install vimwiki-markdown
 
 echo_done "Everything was installed successfully"
 
