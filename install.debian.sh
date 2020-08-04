@@ -27,6 +27,9 @@ sudo npm -g install raml-cop markdownlint-cli write-good
 pip install --user pycodestyle pyflakes flake8 vim-vint proselint yamllint ansible-lint
 sudo apt-get install -y shellcheck tidy yamllint
 
+echo_info "Installing tools"
+pip3 install vimwiki-markdown
+
 echo_info "Patch existing fonts via installing powerline font collection"
 
 git clone git@github.com:powerline/fonts.git

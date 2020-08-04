@@ -26,6 +26,9 @@ sudo npm -g install raml-cop markdownlint-cli write-good
 pip install --user pycodestyle pyflakes flake8 vim-vint proselint yamllint grip
 sudo pacman -S shellcheck tidy
 
+echo_info "Installing tools"
+pip3 install vimwiki-markdown
+
 echo_info "Installing dependencies from sources"
 mkdir -p deps && cd deps || exit
 
