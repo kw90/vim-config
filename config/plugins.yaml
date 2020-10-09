@@ -275,7 +275,6 @@
   hook_add: let g:vmt_auto_update_on_save = 0
 
 - repo: liuchengxu/vista.vim
-  on_cmd: Vista
   hook_add: |-
     let g:vista#renderer#enable_icon = 1
     let g:vista_echo_cursor_strategy = 'scroll'
