@@ -43,6 +43,9 @@ let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_cpp_checkers = ['GCC']
 let g:syntastic_tex_checkers = ['lacheck']
 
+" Set tex flavor
+let g:tex_flavor = 'latex'
+
 " Enable GitHub flavoured MD
 let vim_markdown_preview_github=1
 let vim_markdown_preview_browser='Firefox'
