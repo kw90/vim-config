@@ -4,9 +4,11 @@
 
 echo_info "Installing Python2 and 3 and respective virtualenv"
 
-sudo pacman -S python python2
+sudo pacman -S python python2 ctags
 
 yaourt -S neovim-git
+
+pip3 install pynvim
 
 echo_done "Installed Python and NeoVim"
 
