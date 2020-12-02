@@ -53,6 +53,7 @@ let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_toggle=2
 
 " Add black code formatter for Python
+let g:black_linelength = 79
 autocmd BufWritePre *.py execute ':Black'
 
 " Run tests for Python in Docker
