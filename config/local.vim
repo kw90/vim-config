@@ -104,13 +104,13 @@ nmap <silent> w<C-h> :VimwikiAll2HTML<CR>
 
 "" Functions
 " refresh browser firefox on vim save
-autocmd BufWriteCmd *.html,*.css,*.haml,*.md :call Refresh_browser()
-function! Refresh_browser()
-	if &modified
-		write
-		silent !xdotool key --window $(xdotool search --onlyvisible --name Firefox) ctrl+r
-	endif
-endfunction
+" autocmd BufWriteCmd *.html,*.css,*.haml,*.md :call Refresh_browser()
+" function! Refresh_browser()
+" 	if &modified
+" 		write
+" 		silent !xdotool key --window $(xdotool search --onlyvisible --name Firefox) ctrl+r
+" 	endif
+" endfunction
 
 let g:committia_hooks = {}
 function! g:committia_hooks.edit_open(info)
