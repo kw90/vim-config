@@ -28,6 +28,10 @@ let g:airline_powerline_fonts = 1
 " Airline Theme Configurations
 let g:airline_theme='nord'
 
+" Custom shortcuts
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+
 
 " Syntastic Configurations
 set statusline+=%#warningmsg#
