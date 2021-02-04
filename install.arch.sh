@@ -4,13 +4,21 @@
 
 echo_info "Installing Python2 and 3 and respective virtualenv"
 
-sudo pacman -S python python2 ctags
+# If ~/.pyenv does not exist install it
+if [ ! -d ~/.pyenv ]; then
+	. ./install-pyenv.sh
+fi
 
-yaourt -S neovim-git
-
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+pyenv install 3.8.6
+pyenv virtualenv 3.8.6 neovim
+pyenv activate neovim
 pip3 install pynvim
 
-echo_done "Installed Python and NeoVim"
+yaourt -S --noconfirm neovim-git
+
+echo_done "Installed NeoVim"
 
 echo_info "Sym. linking nvim config"
 
@@ -21,6 +29,9 @@ echo_info "Installing nvim plugins and configs"
 make test
 make install
 sudo npm install -g neovim
+sudo pacman -S bat fd fzf perl ripgrep the_silver_searcher texlive-most texlive-lang zathura-pdf-poppler gdb universal-ctags
+pip3 install debugpy
+sudo npm i -g bash-language-server
 
 echo_info "Installing Linters"
 sudo npm -g install jshint jsxhint jsonlint stylelint sass-lint
@@ -49,6 +60,7 @@ cd ..
 
 echo_done "Everything was installed successfully"
 
+pyenv activate neovim
 nvim -c checkhealth
 
 echo_done "vim config applied"
