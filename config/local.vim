@@ -32,6 +32,12 @@ let g:airline_theme='nord'
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 
+" Vertical split for VimDiff
+set diffopt+=vertical
+
+" Set clipboard for Mac and Windows
+set clipboard=unnamed
+
 
 " Syntastic Configurations
 set statusline+=%#warningmsg#
