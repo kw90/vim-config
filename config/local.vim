@@ -36,7 +36,12 @@ nnoremap <S-Tab> :bprevious<CR>
 set diffopt+=vertical
 
 " Set clipboard for Mac and Windows
-set clipboard=unnamed
+if has('macunix')
+  set clipboard=unnamed
+endif
+if has('win32')
+  set clipboard=unnamed
+endif
 
 
 " Syntastic Configurations
